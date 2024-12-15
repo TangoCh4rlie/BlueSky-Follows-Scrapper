@@ -6,7 +6,7 @@ I've managed to display a graph consisting of 70,000 nodes, here's the result.
 
 The program return 2 files in the data directory: nodes.csv and edges.csv
 
-![[misc/graph.png]]
+![Gephi graph with 70,000 nodes](misc/graph.png)
 
 ## Setup
 ```bash
