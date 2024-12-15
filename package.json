@@ -1,0 +1,21 @@
+{
+  "name": "bsky",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.13.19",
+    "@atproto/oauth-client-node": "^0.2.3",
+    "@types/node": "^22.10.2"
+  }
+}
