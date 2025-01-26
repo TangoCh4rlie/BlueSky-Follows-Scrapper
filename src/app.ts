@@ -41,14 +41,8 @@ async function processFollows() {
             queuedUsers.delete(user)
             continue
         }
-        if (user in treatedUsers) {
-            console.log("User already treated : ", user);
-            queuedUsers.delete(user)
-            continue
-        }
         try {
             const followersResponse: string[] = await getAllFollowers(user)
-            treatedUsers.add(user)
             queuedUsers.delete(user)
             fillQueue(followersResponse)
             
@@ -83,12 +77,6 @@ async function main() {
     queuedUsers.add(user)
 
     await processFollows()
-
-    const queuedUsersList = Array.from(queuedUsers);
-    const treatedUsersList = Array.from(treatedUsers);
-    queuedUsersList.push(...treatedUsersList)
-
-    writeNodesToCSV(queuedUsersList, 'nodes.csv')
     writeEdgesToCSV(followers, 'edges.csv')
 }
 
