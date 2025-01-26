@@ -69,7 +69,7 @@ async function main() {
     const usersLimitParam = parseInt(process.argv[3]);
 
     if (!user) {
-        console.error("Please specify a user as entry like 'elouanreymond.com");
+        console.error("Please specify a user as entry like elouanreymond.com");
         process.exit(1);
     }
 
